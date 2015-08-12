@@ -7,7 +7,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 
+import com.hnb.template.model.Circle;
+
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -127,9 +131,6 @@ public class ColorFilterUtils
         int pixel;
 
 
-
-
-
         // scan through all pixels
         for (int x = 0; x < width; ++x)
         {
@@ -151,7 +152,7 @@ public class ColorFilterUtils
             }
         }
 
-        for (int x = (width -1); x > 0; --x)
+        for (int x = (width - 1); x > 0; --x)
         {
             int h = height--;
             for (int y = 0; y < h; ++y)
@@ -174,10 +175,10 @@ public class ColorFilterUtils
         for (int x = 0; x < width; ++x)
         {
 
-            if(x >= (width/2))
+            if (x >= (width / 2))
             {
-                hh = hh +1;
-                for (int y = (hh -1); y < height; ++y)
+                hh = hh + 1;
+                for (int y = (hh - 1); y < height; ++y)
                 {
 
 
@@ -196,8 +197,8 @@ public class ColorFilterUtils
             }
             else
             {
-                hh = height-x;
-                for (int y = height - 1; y > (hh-1); --y)
+                hh = height - x;
+                for (int y = height - 1; y > (hh - 1); --y)
                 {
 
 
@@ -223,10 +224,202 @@ public class ColorFilterUtils
     }
 
 
+    public static int distance(int x1, int y1, int x2, int y2)
+    {
+        return (int) Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+    }
+
+
+    public static Bitmap doColorFilterCircle(Bitmap src)
+    {
+
+        // image size
+        int width = src.getWidth();
+        int height = src.getHeight();
+        // create output bitmap
+        Bitmap bmOut = Bitmap.createBitmap(width, height, src.getConfig());
+        // color information
+        int A, R, G, B;
+        int pixel;
+
+        List<Circle> circleList = new ArrayList<>();
+
+
+        Circle circle00 = new Circle();
+        circle00.X = width / 2;
+        circle00.Y = height / 2;
+        circle00.radius = (width);
+        circle00.red = 0.1;
+        circle00.green = 0.5;
+        circle00.blue = 1;
+
+        circleList.add(circle00);
+
+
+        Circle circle1 = new Circle();
+        circle1.X = width / 2;
+        circle1.Y = height / 2;
+        circle1.radius = (width / 2) - 70;
+        circle1.red = 1;
+        circle1.green = 1;
+        circle1.blue = 0.5;
+
+        circleList.add(circle1);
+
+
+        Circle circle2 = new Circle();
+        circle2.X = (int) (width / 4);
+        circle2.Y = (int) (height / 4);
+        circle2.radius = (width / 3) - 100;
+        circle2.red = 0.5;
+        circle2.green = 0.1;
+        circle2.blue = 1;
+        circleList.add(circle2);
+
+        Circle circle0 = new Circle();
+        circle0.X = (int) (width / 1.25);
+        circle0.Y = (int) (height / 1.25);
+        circle0.radius = (width / 3) - 100;
+        circle0.red = 0.8;
+        circle0.green = 0.8;
+        circle0.blue = 0.25;
+        circleList.add(circle0);
+
+
+       /* Circle circle3 = new Circle();
+        circle3.X = width / 4;
+        circle3.Y = height / 4;
+        circle3.radius = (width / 4) - 50;
+        circle3.red = 0.5;
+        circle3.green = 1;
+        circle3.blue = 0.5;
+        circleList.add(circle3);
+
+
+        Circle circle4 = new Circle();
+        circle4.X = width / 5;
+        circle4.Y = height / 5;
+        circle4.radius = (width / 5) - 10;
+        circle4.red = 1;
+        circle4.green = 1;
+        circle4.blue = 1;
+        circleList.add(circle4);*/
+
+        for (Circle circle : circleList)
+        {
+
+            // scan through all pixels
+            for (int x = 0; x < width; ++x)
+            {
+                for (int y = 0; y < height; ++y)
+                {
+
+                    int distance = distance(x, y, circle.X, circle.Y);
+                    if (distance >= circle.radius)
+                    {
+                       /* // get pixel color
+                        pixel = src.getPixel(x, y);
+                        // apply filtering on each channel R, G, B
+                        A = Color.alpha(pixel);
+                        R = (int) (Color.red(pixel));
+                        G = (int) (Color.green(pixel));
+                        B = (int) (Color.blue(pixel));
+
+                        // set new color pixel to output bitmap
+                        bmOut.setPixel(x, y, Color.argb(A, R, G, B));*/
+
+                    }
+                    else
+                    {
+                        // get pixel color
+                        pixel = src.getPixel(x, y);
+                        // apply filtering on each channel R, G, B
+                        A = Color.alpha(pixel);
+                        R = (int) (Color.red(pixel) * circle.red);
+                        G = (int) (Color.green(pixel) * circle.green);
+                        B = (int) (Color.blue(pixel) * circle.blue);
+
+                        // set new color pixel to output bitmap
+                        bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+                    }
+
+
+                }
+            }
+        }
+        // return final image
+        return bmOut;
+
+
+    }
+
+
+    public static Bitmap doColorFilterCircle(Bitmap src, int circleX, int circleY, int radius)
+    {
+        // image size
+        int width = src.getWidth();
+        int height = src.getHeight();
+        // create output bitmap
+        Bitmap bmOut = Bitmap.createBitmap(width, height, src.getConfig());
+        // color information
+        int A, R, G, B;
+        int pixel;
+
+
+        circleX = width / 2;
+        circleY = height / 2;
+        radius = (width / 2) - 150;
+
+        /*int width1 = width / 6;
+        int width2 = (width * 3) / 6;
+        int width3 = width;
+        int width4 = width;*/
+
+
+        // scan through all pixels
+        for (int x = 0; x < width; ++x)
+        {
+            for (int y = 0; y < height; ++y)
+            {
+                int distance = distance(x, y, circleX, circleY);
+                if (distance >= radius)
+                {
+                    // get pixel color
+                    pixel = src.getPixel(x, y);
+                    // apply filtering on each channel R, G, B
+                    A = Color.alpha(pixel);
+                    R = (int) (Color.red(pixel) * 0.1);
+                    G = (int) (Color.green(pixel) * 1);
+                    B = (int) (Color.blue(pixel) * 1);
+
+                    // set new color pixel to output bitmap
+                    bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+
+                }
+                else
+                {
+                    // get pixel color
+                    pixel = src.getPixel(x, y);
+                    // apply filtering on each channel R, G, B
+                    A = Color.alpha(pixel);
+                    R = (int) (Color.red(pixel) * 1);
+                    G = (int) (Color.green(pixel) * 1);
+                    B = (int) (Color.blue(pixel) * 0.5);
+
+                    // set new color pixel to output bitmap
+                    bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+                }
+
+
+            }
+        }
+        // return final image
+        return bmOut;
+    }
+
 
     public static Bitmap doColorFilterTest(Bitmap src)
     {
-
 
 
         // image size
@@ -238,8 +431,8 @@ public class ColorFilterUtils
         int A, R, G, B;
         int pixel;
 
-        int width1 = width/6;
-        int width2 = (width*3)/6;
+        int width1 = width / 6;
+        int width2 = (width * 3) / 6;
         int width3 = width;
         int width4 = width;
 

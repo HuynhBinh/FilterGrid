@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+
+
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/sample"
+            android:layout_gravity="center"
+            android:scaleType="center"/>
+
+
+        <com.hnb.template.custom.CustomMaskView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:id="@+id/mask"
+            android:layout_gravity="center"/>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>
