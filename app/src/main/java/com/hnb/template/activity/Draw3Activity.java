@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.hnb.template.R;
 import com.hnb.template.base.BaseActivity;
+import com.hnb.template.custom.CustomImageView;
 import com.hnb.template.custom.CustomMaskView;
 
 /**
@@ -19,7 +20,7 @@ import com.hnb.template.custom.CustomMaskView;
  */
 public class Draw3Activity extends BaseActivity
 {
-    ImageView imageView;
+    CustomImageView imageView;
     CustomMaskView mask;
 
     @Override
@@ -31,16 +32,20 @@ public class Draw3Activity extends BaseActivity
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sample);
         Bitmap gray = toGrayscale(bitmap);
-        imageView.setImageBitmap(gray);
-        bitmap.recycle();
+        imageView.setSrcBitmap(gray);
+        mask.setSrcBitmap(bitmap);
 
     }
+
+
 
     private void initView()
     {
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView = (CustomImageView) findViewById(R.id.imageView);
         mask = (CustomMaskView) findViewById(R.id.mask);
     }
+
+
 
     public Bitmap toGrayscale(Bitmap bmpOriginal)
     {

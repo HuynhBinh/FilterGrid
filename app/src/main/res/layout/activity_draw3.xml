@@ -9,19 +9,18 @@
         android:layout_width="300dp"
         android:layout_height="300dp">
 
-        <ImageView
+        <com.hnb.template.custom.CustomImageView
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:id="@+id/imageView"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"/>
+            android:visibility="visible"/>
 
         <com.hnb.template.custom.CustomMaskView
             android:id="@+id/mask"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"/>
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:visibility="visible"
+           />
 
     </FrameLayout>
 
