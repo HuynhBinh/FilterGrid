@@ -45,7 +45,7 @@
 
         <!--ACTIVITY-->
         <activity
-            android:name=".activity.Draw1Activity"
+            android:name=".activity.Draw3Activity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

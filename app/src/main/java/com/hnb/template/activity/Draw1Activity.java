@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import com.hnb.template.R;
 import com.hnb.template.base.BaseActivity;
-import com.hnb.template.custom.CustomMaskView;
+import com.hnb.template.custom.TouchImageView;
 
 /**
  * Created by USER on 8/12/2015.
@@ -14,7 +14,7 @@ import com.hnb.template.custom.CustomMaskView;
 public class Draw1Activity extends BaseActivity
 {
     ImageView imageView;
-    CustomMaskView mask;
+    TouchImageView mask;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState)
@@ -29,8 +29,7 @@ public class Draw1Activity extends BaseActivity
     private void initView()
     {
         imageView = (ImageView) findViewById(R.id.imageView);
-        mask = (CustomMaskView) findViewById(R.id.mask);
+        mask = (TouchImageView) findViewById(R.id.mask);
     }
-
 
 }

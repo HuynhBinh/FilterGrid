@@ -13,16 +13,16 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:id="@+id/imageView"
-            android:src="@drawable/bird"
+            android:src="@drawable/sample"
             android:layout_gravity="center"
             android:scaleType="center"/>
 
-        <com.hnb.template.custom.TouchImageView
+ <!--       <com.hnb.template.custom.TouchImageView
             android:id="@+id/mask"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
-            android:src="@drawable/star"/>
+            android:src="@drawable/star"/>-->
 
 
         <!--<com.hnb.template.custom.CustomMaskView

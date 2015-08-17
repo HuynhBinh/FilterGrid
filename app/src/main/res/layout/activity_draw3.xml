@@ -13,24 +13,15 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:id="@+id/imageView"
-            android:src="@drawable/bird"
-            android:layout_gravity="center"
-            android:scaleType="center"/>
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
 
-        <com.hnb.template.custom.TouchImageView
+        <com.hnb.template.custom.CustomMaskView
             android:id="@+id/mask"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:layout_gravity="center"
-            android:src="@drawable/star"/>
-
-
-        <!--<com.hnb.template.custom.CustomMaskView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:id="@+id/mask"
-            android:layout_gravity="center"/>-->
-
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"/>
 
     </FrameLayout>
 

@@ -29,7 +29,6 @@ public class DrawActivity extends BaseActivity
         Bitmap bmp = ColorFilterUtils.doColorFilterCircle(original);
 
         imageView.setImageBitmap(bmp);
-
     }
 
 
