@@ -20,8 +20,7 @@ public class CustomImageView extends ImageView
     public void setSrcBitmap(Bitmap bitmap)
     {
         this.srcBitmap = bitmap;
-        Drawable d = new BitmapDrawable(getResources(), bitmap);
-        this.setImageDrawable(d);
+
 
     }
 

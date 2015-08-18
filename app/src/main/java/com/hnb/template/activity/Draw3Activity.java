@@ -7,7 +7,6 @@ import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.hnb.template.R;
@@ -39,17 +38,18 @@ public class Draw3Activity extends BaseActivity
     private int mBFactorValue = 100;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw3);
         initView();
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sample1);
-        Bitmap gray = toGrayscale(bitmap);
-        Bitmap colorful = ColorFilterUtils.doColorFilter(bitmap, 0.6, 0.6, 0.3);
-        imageView.setSrcBitmap(bitmap);
-        mask.setSrcBitmap(colorful);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.mia);
+        Bitmap gray = ColorFilterUtils.grayScale(bitmap);
+        Bitmap yellow = ColorFilterUtils.doColorFilter(bitmap, 0, 1, 0.5);
+        Bitmap green = ColorFilterUtils.doColorFilter(bitmap, 1, 1, 0.5);
+        imageView.setSrcBitmap(green);
+        mask.setSrcBitmap(gray);
 
 
         /*final int width = imageView.getDrawable().getIntrinsicWidth();

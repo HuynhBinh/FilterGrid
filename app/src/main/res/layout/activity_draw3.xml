@@ -2,24 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center">
+              android:gravity="center"
+    android:background="#000000">
 
 
     <FrameLayout
-        android:layout_width="300dp"
-        android:layout_height="300dp">
+        android:layout_width="350dp"
+        android:layout_height="match_parent">
 
         <com.hnb.template.custom.CustomImageView
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
             android:id="@+id/imageView"
-            android:src="@drawable/sample"
             android:visibility="visible"/>
 
         <com.hnb.template.custom.CustomMaskView
             android:id="@+id/mask"
             android:layout_width="350dp"
-            android:layout_height="350dp"
+            android:layout_height="match_parent"
             android:visibility="visible"
             />
 

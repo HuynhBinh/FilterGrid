@@ -446,9 +446,9 @@ public class ColorFilterUtils
                 pixel = src.getPixel(x, y);
                 // apply filtering on each channel R, G, B
                 A = Color.alpha(pixel);
-                R = (int) (Color.red(pixel) * 0.6);
-                G = (int) (Color.green(pixel) * 0.5);
-                B = (int) (Color.blue(pixel) * 0.5);
+                R = (int) (Color.red(pixel) * 0.7);
+                G = (int) (Color.green(pixel) * 0.3);
+                B = (int) (Color.blue(pixel) * 0.7);
 
                 // set new color pixel to output bitmap
                 bmOut.setPixel(x, y, Color.argb(A, R, G, B));
@@ -463,8 +463,8 @@ public class ColorFilterUtils
                 pixel = src.getPixel(x, y);
                 // apply filtering on each channel R, G, B
                 A = Color.alpha(pixel);
-                R = (int) (Color.red(pixel) * 0.1);
-                G = (int) (Color.green(pixel) * 1);
+                R = (int) (Color.red(pixel) * 0.5);
+                G = (int) (Color.green(pixel) * 0.5);
                 B = (int) (Color.blue(pixel) * 1);
                 // set new color pixel to output bitmap
                 bmOut.setPixel(x, y, Color.argb(A, R, G, B));
@@ -480,7 +480,7 @@ public class ColorFilterUtils
                 pixel = src.getPixel(x, y);
                 // apply filtering on each channel R, G, B
                 A = Color.alpha(pixel);
-                R = (int) (Color.red(pixel) * 0.8);
+                R = (int) (Color.red(pixel) * 1);
                 G = (int) (Color.green(pixel) * 1);
                 B = (int) (Color.blue(pixel) * 0.5);
                 // set new color pixel to output bitmap
@@ -562,7 +562,7 @@ public class ColorFilterUtils
 
     }
 
-    private Bitmap grayScale(Bitmap scrBitmap)
+    public static Bitmap grayScale(Bitmap scrBitmap)
     {
 
         float GSRed = 0.30f;

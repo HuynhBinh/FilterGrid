@@ -55,10 +55,10 @@ public class CustomMaskView extends ImageView
 
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 3;
+        options.inSampleSize = 1;
 
 
-        shapeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.shape_10, options);
+        shapeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.heart3, options);
         // shapeBitmap1 = Bitmap.createBitmap(shapeBitmap.getWidth(), shapeBitmap.getHeight(), Bitmap.Config.ARGB_8888);
         // shapeCanvas = new Canvas(shapeBitmap1);
         // shapeCanvas.drawBitmap(shapeBitmap, 0, 0, new Paint());
@@ -90,7 +90,7 @@ public class CustomMaskView extends ImageView
 
         temp.drawBitmap(srcBitmap, 0, 0, paint);
 
-        //temp.drawCircle(X, Y, 200, transparentPaint);
+        //temp.drawCircle(X, Y, 400, transparentPaint);
 
         temp.drawBitmap(shapeBitmap, X - shapeBitmap.getWidth() / 2, Y - shapeBitmap.getHeight() / 2, paint);
 

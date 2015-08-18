@@ -3,7 +3,7 @@ package com.hnb.template.activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
 import android.widget.ImageView;
 
 import com.hnb.template.R;
@@ -19,14 +19,14 @@ public class DrawActivity extends BaseActivity
     ImageView imageView;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw);
         initView();
 
-        Bitmap original = BitmapFactory.decodeResource(getResources(), R.drawable.sample);
-        Bitmap bmp = ColorFilterUtils.doColorFilterCircle(original);
+        Bitmap original = BitmapFactory.decodeResource(getResources(), R.drawable.mia);
+        Bitmap bmp = ColorFilterUtils.doColorFilterTest(original);
 
         imageView.setImageBitmap(bmp);
     }
