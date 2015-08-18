@@ -4,11 +4,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.widget.ImageView;
 
 /**
@@ -22,6 +20,9 @@ public class CustomImageView extends ImageView
     public void setSrcBitmap(Bitmap bitmap)
     {
         this.srcBitmap = bitmap;
+        Drawable d = new BitmapDrawable(getResources(), bitmap);
+        this.setImageDrawable(d);
+
     }
 
     public CustomImageView(Context context)
