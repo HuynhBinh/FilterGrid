@@ -494,6 +494,31 @@ public class ColorFilterUtils
 
     }
 
+    public static Bitmap bright(Bitmap bmp)
+    {
+        Bitmap operation = Bitmap.createBitmap(bmp.getWidth(), bmp.getHeight(), bmp.getConfig());
+
+        for (int i = 0; i < bmp.getWidth(); i++)
+        {
+            for (int j = 0; j < bmp.getHeight(); j++)
+            {
+                int p = bmp.getPixel(i, j);
+                int r = Color.red(p);
+                int g = Color.green(p);
+                int b = Color.blue(p);
+                int alpha = Color.alpha(p);
+
+                r = 100 + r;
+                g = 100 + g;
+                b = 100 + b;
+                alpha = 100 + alpha;
+                operation.setPixel(i, j, Color.argb(alpha, r, g, b));
+            }
+        }
+        //im.setImageBitmap(operation);
+        return operation;
+    }
+
 
     public static Bitmap doColorFilter(Bitmap src, double red, double green, double blue)
     {
@@ -514,6 +539,9 @@ public class ColorFilterUtils
                 // get pixel color
                 pixel = src.getPixel(x, y);
                 // apply filtering on each channel R, G, B
+
+                Color.red(pixel);
+
                 A = Color.alpha(pixel);
                 R = (int) (Color.red(pixel) * red);
                 G = (int) (Color.green(pixel) * green);

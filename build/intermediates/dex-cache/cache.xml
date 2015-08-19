@@ -2,11 +2,221 @@
 <items version="2" >
 
     <item
-        jar="/Android/GitHub/FilterGrid/app/build/intermediates/exploded-aar/FilterGrid/gestureimageview/unspecified/classes.jar"
+        jar="D:\SW\DevTool\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="5763595dff34e674f87e3d59eb7d97ff5e80e2d2">
-        <dex dex="/Android/GitHub/FilterGrid/app/build/intermediates/pre-dexed/debug/classes-36a7b59bb7741ab10053b14daba1d2165086948e.jar" />
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-fd40f5c892f2dec34381995b746a9c0207410871.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-8de7d492f1b600ec06903a736c07433ff8672f8f.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-ca9f5ef5436637896b0e389abf077588eaf7da46.jar" />
+    </item>
+    <item
+        jar="C:\Users\USER\.gradle\caches\modules-2\files-2.1\de.greenrobot\greendao\1.3.7\dda08161d004c4df96938da6909f1c2b96cd33c8\greendao-1.3.7.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dda08161d004c4df96938da6909f1c2b96cd33c8">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\greendao-1.3.7-6751320654171676399a0f709c4a9b8e1509b448.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-0da405ececccd59500c59b32fa6025a9cee2b21d.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-6f39f558777be96712927112980dd9fd1474e0f6.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-33e735d633f2dade970bad65a6f4173525d51696.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-c01e98051af1788b06a9da99cd4731d487d2f155.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-5a4c1cd5deb3b42497415e54a268cdd0f08ba2df.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-594aebab3afd018b5928ba0519912a868c359c35.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-622029cf00319a07fa471fa8b61a6578178c047a.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-6b4887b4ba9e0ad4b5fbea1eb4d153cc3cb59f65.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-d200b0b7f51a5299231f26131be79c7ad6585360.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-193481c09aad381f334a4037ddc6b4c17d3c4743.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-a9f52e792ec23fc1acfacd8779c7e3478139e84f.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-e81c8a6995205b5594260bdc0faa767b390849cd.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.5\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="75c54c470e19b251749e6e6c2cf3d73c0b50aa64">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-d5c5e07204d1286fc197f72ae994196abc07e943.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-d3910baa0ab6bbc37a22f59a10dc3a1b5508b1c0.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-9003f68564cb5e77e98a838431e020f8c0b89e7b.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-a51a62b446ba56608cc7d6f15c93ea046965ac1c.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-106d32a1045ccb3284bacf6f30c0fb677e31dfb2.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-688baec622c90c11f1f086a4b73727dcd29420aa.jar" />
+    </item>
+    <item
+        jar="C:\Users\USER\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-40f77c2d9ee1046d69d64629bae9c3d8f8295e6b.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-55f2969e2481e817ac8a4dfee62781e84a222377.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\libs\Parse-1.9.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="56c22930b5d4f77015b6a40c7f14103d3e101001">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\Parse-1.9.4-275f3b7654fc4bf51204a9a0d00b3a6778408b45.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-84d03b59d4e81f7f6fc78ae4b9cf8cc32e581df7.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-8216dd17495ba0df39fdb131edb679acc2e088fa.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\libs\universal-image-loader-1.9.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.3-f89dfa96b06077b743651a139808f465cb6a4033.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-35c8acf7b6cb6eff8f97b25fb597ce3fcdd03564.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-3fbf1f5323c73642f41bbb0728ac0866914955b1.jar" />
+    </item>
+    <item
+        jar="D:\Github\FilterGrid2\app\build\intermediates\exploded-aar\FilterGrid2\gestureimageview\unspecified\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c4d0b4b818243cad38d09dbde168f08ce9db72e">
+        <dex dex="D:\Github\FilterGrid2\app\build\intermediates\pre-dexed\debug\classes-26ccf02a6da04812ce9ad45c49dd94abfc6ea8c7.jar" />
     </item>
 
 </items>
