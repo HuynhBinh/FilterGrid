@@ -22,8 +22,6 @@ public class Draw1Activity extends BaseActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_draw1);
         initView();
-
-
     }
 
     private void initView()

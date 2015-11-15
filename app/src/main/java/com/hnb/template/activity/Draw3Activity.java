@@ -44,12 +44,13 @@ public class Draw3Activity extends BaseActivity
         setContentView(R.layout.activity_draw3);
         initView();
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.mia);
-        Bitmap gray = ColorFilterUtils.grayScale(bitmap);
-        Bitmap yellow = ColorFilterUtils.doColorFilter(bitmap, 0, 1, 0.5);
-        Bitmap green = ColorFilterUtils.doColorFilter(bitmap, 1, 1, 0.5);
-        imageView.setSrcBitmap(green);
-        mask.setSrcBitmap(gray);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sample);
+        //Bitmap gray = toGrayscale(bitmap);
+        //Bitmap yellow = ColorFilterUtils.doColorFilter(bitmap, 0, 1, 0.5);
+        //Bitmap green = ColorFilterUtils.doColorFilter(bitmap, 1, 1, 0.5);
+        //Bitmap lighter = ColorFilterUtils.bright(bitmap);
+        imageView.setSrcBitmap(bitmap);
+        mask.setSrcBitmap(bitmap);
 
 
         /*final int width = imageView.getDrawable().getIntrinsicWidth();
