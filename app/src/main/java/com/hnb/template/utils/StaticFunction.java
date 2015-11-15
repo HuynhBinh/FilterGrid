@@ -218,7 +218,7 @@ public class StaticFunction
     public static void saveBitmapToSDCard(String imageName, Bitmap bitmap)
     {
         String root = Environment.getExternalStorageDirectory().toString();
-        File myDir = new File(root + "/AppName");
+        File myDir = new File(root + "/FranceColor");
 
         if (!myDir.exists())
         {

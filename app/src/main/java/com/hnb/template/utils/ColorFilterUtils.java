@@ -417,6 +417,95 @@ public class ColorFilterUtils
         return bmOut;
     }
 
+    public static Bitmap doColorFilterFrance(Bitmap src)
+    {
+
+        float GSRed = 0.30f;
+        float GSGreen = 0.59f;
+        float GSBlue = 0.11f;
+
+        int pixelColor;
+
+        int A1, R1, B1, G1;
+
+
+        // image size
+        int width = src.getWidth();
+        int height = src.getHeight();
+        // create output bitmap
+        Bitmap bmOut = Bitmap.createBitmap(width, height, src.getConfig());
+        // color information
+        int A, R, G, B;
+        int pixel;
+
+        int eachWidth = width / 3;
+        int eachWidthx2 = eachWidth * 2;
+        int eachWidthx3 = eachWidth * 3;
+
+
+        // scan through all pixels
+        for (int x = 0; x < eachWidth; ++x)
+        {
+            for (int y = 0; y < height; ++y)
+            {
+                // get pixel color
+                pixel = src.getPixel(x, y);
+                // apply filtering on each channel R, G, B
+                A = Color.alpha(pixel);
+                R = (int) (Color.red(pixel) * 0.1);
+                G = (int) (Color.green(pixel) * 0.3);
+                B = (int) (Color.blue(pixel) * 1);
+
+                // set new color pixel to output bitmap
+                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+            }
+        }
+
+        for (int x = eachWidth; x < eachWidthx2; ++x)
+        {
+            for (int y = 0; y < height; ++y)
+            {
+
+
+                pixelColor = src.getPixel(x, y);
+
+                A1 = Color.alpha(pixelColor);
+                R1 = Color.red(pixelColor);
+                G1 = Color.green(pixelColor);
+                B1 = Color.blue(pixelColor);
+
+
+                R1 = G1 = B1 = (int) (R1 * GSRed + G1 * GSGreen + B1 * GSBlue);
+
+                bmOut.setPixel(x, y, Color.argb(A1, R1, G1, B1));
+
+
+            }
+        }
+
+
+        for (int x = eachWidthx2; x < eachWidthx3; ++x)
+        {
+            for (int y = 0; y < height; ++y)
+            {
+                // get pixel color
+                pixel = src.getPixel(x, y);
+                // apply filtering on each channel R, G, B
+                A = Color.alpha(pixel);
+                R = (int) (Color.red(pixel) * 1);
+                G = (int) (Color.green(pixel) * 0.1);
+                B = (int) (Color.blue(pixel) * 0.3);
+                // set new color pixel to output bitmap
+                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+            }
+        }
+
+        // return final image
+        return bmOut;
+
+
+    }
+
 
     public static Bitmap doColorFilterTest(Bitmap src)
     {
@@ -446,30 +535,30 @@ public class ColorFilterUtils
                 pixel = src.getPixel(x, y);
                 // apply filtering on each channel R, G, B
                 A = Color.alpha(pixel);
-                R = (int) (Color.red(pixel) * 0.7);
-                G = (int) (Color.green(pixel) * 0.3);
-                B = (int) (Color.blue(pixel) * 0.7);
-
-                // set new color pixel to output bitmap
-                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
-            }
-        }
-
-        for (int x = width1; x < width2; ++x)
-        {
-            for (int y = 0; y < height; ++y)
-            {
-                // get pixel color
-                pixel = src.getPixel(x, y);
-                // apply filtering on each channel R, G, B
-                A = Color.alpha(pixel);
-                R = (int) (Color.red(pixel) * 0.5);
-                G = (int) (Color.green(pixel) * 0.5);
+                R = (int) (Color.red(pixel) * 0.1);
+                G = (int) (Color.green(pixel) * 0.1);
                 B = (int) (Color.blue(pixel) * 1);
+
                 // set new color pixel to output bitmap
                 bmOut.setPixel(x, y, Color.argb(A, R, G, B));
             }
         }
+
+        //        for (int x = width1; x < width2; ++x)
+        //        {
+        //            for (int y = 0; y < height; ++y)
+        //            {
+        //                // get pixel color
+        //                pixel = src.getPixel(x, y);
+        //                // apply filtering on each channel R, G, B
+        //                A = Color.alpha(pixel);
+        //                R = (int) (Color.red(pixel) * 0.5);
+        //                G = (int) (Color.green(pixel) * 0.5);
+        //                B = (int) (Color.blue(pixel) * 0.5);
+        //                // set new color pixel to output bitmap
+        //                bmOut.setPixel(x, y, Color.argb(A, R, G, B));
+        //            }
+        //        }
 
 
         for (int x = width2; x < width3; ++x)
@@ -481,8 +570,8 @@ public class ColorFilterUtils
                 // apply filtering on each channel R, G, B
                 A = Color.alpha(pixel);
                 R = (int) (Color.red(pixel) * 1);
-                G = (int) (Color.green(pixel) * 1);
-                B = (int) (Color.blue(pixel) * 0.5);
+                G = (int) (Color.green(pixel) * 0.1);
+                B = (int) (Color.blue(pixel) * 0.1);
                 // set new color pixel to output bitmap
                 bmOut.setPixel(x, y, Color.argb(A, R, G, B));
             }
